@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTS26 — Climatisation & Électricité à Valence</title>
+  <meta name="description" content="Expert en climatisation et électricité à Valence. Certification RGE, 100+ chantiers réalisés. Devis gratuit sous 24h." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          },
+          letterSpacing: {
+            tight: '-0.02em',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; letter-spacing: -0.02em; }
+
+    /* Nav underline hover */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 1px;
+      background: #000;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+    .nav-link:hover::after { transform: scaleX(1); }
+
+    /* Input bottom-border only */
+    .input-underline {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #d1d5db;
+      border-radius: 0;
+      outline: none;
+      transition: border-color 0.2s ease;
+      width: 100%;
+      padding: 0.625rem 0;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -0.02em;
+      font-size: 0.9375rem;
+      color: #000;
+    }
+    .input-underline::placeholder { color: #9ca3af; }
+    .input-underline:focus { border-bottom-color: #000; }
+
+    /* Textarea variant */
+    textarea.input-underline { resize: none; }
+
+    /* Star rating */
+    .star { color: #f59e0b; }
+
+    /* WhatsApp float */
+    @keyframes pulse-soft {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.35); }
+      50%       { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+    }
+    .whatsapp-btn { animation: pulse-soft 2.4s ease-in-out infinite; }
+
+    /* Section divider */
+    .section-divider { border-top: 1px solid #e5e7eb; }
+
+    /* Service card hover */
+    .service-card {
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+    }
+
+    /* Review card */
+    .review-card {
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+
+    /* CTA button */
+    .btn-primary {
+      background: #000;
+      color: #fff;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .btn-primary:hover { background: #1a1a1a; transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-white text-black">
+
+  <!-- ===== NAV ===== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-xl font-extrabold tracking-tight leading-none">MTS26</span>
+        <span class="hidden sm:block text-xs font-medium text-gray-400 uppercase tracking-widest pt-px">Climatisation · Électricité</span>
+      </a>
+
+      <!-- Nav links (desktop) -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+        <a href="#services" class="nav-link hover:text-black transition-colors">Services</a>
+        <a href="#avis" class="nav-link hover:text-black transition-colors">Avis clients</a>
+        <a href="#contact" class="nav-link hover:text-black transition-colors">Contact</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="tel:0769651779"
+         class="btn-primary inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 5a2 2 0 012-2h2.28a2 2 0 011.897 1.368l.878 2.632a2 2 0 01-.45 2.109L8 11c1.137 2.274 3.726 4.863 6 6l1.89-1.605a2 2 0 012.11-.45l2.632.878A2 2 0 0122 17.72V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5z"/>
+        </svg>
+        Appeler l'expert
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main>
+    <section class="pt-32 pb-24 md:pt-44 md:pb-36 px-6">
+      <div class="max-w-4xl mx-auto">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 mb-10 text-xs font-semibold uppercase tracking-widest text-gray-500">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span>
+          Disponible · Valence & alentours
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-8">
+          Le confort thermique,<br />
+          <span class="text-gray-400">l'expertise en plus.</span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-gray-500 font-normal max-w-2xl leading-relaxed mb-12">
+          Installateur certifié <strong class="text-black font-semibold">RGE</strong> à Valence.
+          Plus de <strong class="text-black font-semibold">100 chantiers</strong> réalisés avec soin —
+          climatisation, pompe à chaleur et électricité résidentielle.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:0769651779"
+             class="btn-primary inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5a2 2 0 012-2h2.28a2 2 0 011.897 1.368l.878 2.632a2 2 0 01-.45 2.109L8 11c1.137 2.274 3.726 4.863 6 6l1.89-1.605a2 2 0 012.11-.45l2.632.878A2 2 0 0122 17.72V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5z"/>
+            </svg>
+            07 69 65 17 79
+          </a>
+          <a href="#contact"
+             class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-gray-200 text-base font-semibold text-gray-700 hover:border-black hover:text-black transition-colors">
+            Demander un devis gratuit
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="mt-20 grid grid-cols-3 gap-0 border border-gray-100 rounded-2xl overflow-hidden">
+          <div class="px-6 py-6 md:px-8 md:py-8 border-r border-gray-100">
+            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">100+</p>
+            <p class="text-sm text-gray-500 mt-1 font-medium">Chantiers réalisés</p>
+          </div>
+          <div class="px-6 py-6 md:px-8 md:py-8 border-r border-gray-100">
+            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">RGE</p>
+            <p class="text-sm text-gray-500 mt-1 font-medium">Certifié Qualibois</p>
+          </div>
+          <div class="px-6 py-6 md:px-8 md:py-8">
+            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">24h</p>
+            <p class="text-sm text-gray-500 mt-1 font-medium">Devis sous 24 heures</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BANDEAU CONFIANCE ===== -->
+    <div class="section-divider">
+      <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10">
+        <!-- Google logo + note -->
+        <div class="flex items-center gap-3">
+          <svg viewBox="0 0 48 48" class="w-7 h-7 flex-shrink-0" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.36-8.16 2.36-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+          </svg>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1">
+              <span class="star text-lg">★★★★★</span>
+            </div>
+            <span class="text-xs text-gray-500 font-medium">Note Google</span>
+          </div>
+        </div>
+
+        <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-2xl font-extrabold tracking-tight">5 / 5</p>
+          <p class="text-xs text-gray-500 font-medium">Basé sur <strong class="text-black">36 avis</strong> vérifiés</p>
+        </div>
+
+        <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
+
+        <div class="flex items-center gap-2 text-sm text-gray-500 font-medium">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Entreprise locale de confiance
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section-divider py-24 md:py-32 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-16">
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Nos prestations</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Ce que nous faisons,<br />nous le faisons bien.</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Service 1 -->
+          <div class="service-card border border-gray-100 rounded-2xl p-8">
+            <div class="mb-8">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 3v1m0 16v1M4.22 4.22l.71.71m13.66 13.66.71.71M3 12H2m20 0h-1M4.22 19.78l.71-.71M18.36 5.64l.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 9v3m0 0v3m0-3h3m-3 0H9"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Installation</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Pose de climatiseurs mono et multi-split, pompes à chaleur air/air et air/eau.
+              Dimensionnement adapté à votre logement, installation soignée et mise en service complète.
+            </p>
+            <div class="mt-8 pt-6 border-t border-gray-100">
+              <ul class="space-y-2 text-sm text-gray-500">
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Split mural & console
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Pompe à chaleur PAC
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Marques Daikin, Mitsubishi, Atlantic
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card border border-gray-100 rounded-2xl p-8">
+            <div class="mb-8">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0V2m0 16v2M4 11H2m18 0h-2M6.34 6.34L4.93 4.93m12.73 12.73l-1.41-1.41M6.34 17.66l-1.41 1.41m12.73-12.73l-1.41 1.41"/>
+                <circle cx="11" cy="11" r="2.5" stroke="currentColor" stroke-width="1.25"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Maintenance</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Entretien annuel de vos systèmes pour garantir performance et longévité.
+              Nettoyage des filtres, contrôle du circuit frigorifique, diagnostic électronique.
+            </p>
+            <div class="mt-8 pt-6 border-t border-gray-100">
+              <ul class="space-y-2 text-sm text-gray-500">
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Contrat d'entretien annuel
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Dépannage rapide
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Recharge de fluide frigorigène
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card border border-gray-100 rounded-2xl p-8">
+            <div class="mb-8">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Électricité</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Travaux d'électricité générale, mise aux normes, création de circuits dédiés.
+              Intervention propre et sécurisée, tableau électrique, prises et éclairage.
+            </p>
+            <div class="mt-8 pt-6 border-t border-gray-100">
+              <ul class="space-y-2 text-sm text-gray-500">
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Tableau & mise aux normes
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Création de circuits
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Bornes de recharge IRVE
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="mt-10 border border-gray-100 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-10">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-sm">Certification RGE</p>
+              <p class="text-xs text-gray-400">Reconnu Garant de l'Environnement</p>
+            </div>
+          </div>
+          <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            Votre certification RGE vous ouvre droit aux
+            <strong class="text-black">aides MaPrimeRénov'</strong>, à
+            <strong class="text-black">l'éco-PTZ</strong> et aux primes CEE.
+            Nous vous accompagnons dans vos démarches.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOCIAL PROOF ===== -->
+    <section id="avis" class="section-divider py-24 md:py-32 px-6 bg-gray-50/50">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-16">
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Ce que disent nos clients</p>
+          <div class="flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">36 avis · 5 étoiles.</h2>
+            <div class="flex items-center gap-1 mb-1">
+              <span class="star text-2xl">★★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Avis 1 — Renaud OLIVER -->
+          <div class="review-card bg-white rounded-2xl p-8 border border-gray-100">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                  RO
+                </div>
+                <div>
+                  <p class="font-bold text-sm tracking-tight">Renaud OLIVER</p>
+                  <p class="text-xs text-gray-400">Client vérifié Google</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="star text-base">★★★★★</span>
+              </div>
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              "Très satisfait de la prestation. Kaïs est intervenu rapidement,
+              le travail est propre et soigné. L'installation de la climatisation
+              s'est déroulée sans aucun souci. Je recommande vivement cette entreprise
+              pour son sérieux et sa compétence."
+            </p>
+            <div class="mt-6 pt-5 border-t border-gray-100 flex items-center gap-2 text-xs text-gray-400">
+              <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+              </svg>
+              Avis vérifié · Installation climatisation
+            </div>
+          </div>
+
+          <!-- Avis 2 — Paula Pereira -->
+          <div class="review-card bg-white rounded-2xl p-8 border border-gray-100">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                  PP
+                </div>
+                <div>
+                  <p class="font-bold text-sm tracking-tight">Paula Pereira</p>
+                  <p class="text-xs text-gray-400">Client vérifié Google</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="star text-base">★★★★★</span>
+              </div>
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              "Excellent professionnel ! Ponctuel, efficace et très à l'écoute.
+              Il a installé notre climatisation en un temps record et tout fonctionne
+              parfaitement. Le rapport qualité-prix est vraiment excellent.
+              N'hésitez pas à faire appel à ses services !"
+            </p>
+            <div class="mt-6 pt-5 border-t border-gray-100 flex items-center gap-2 text-xs text-gray-400">
+              <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+              </svg>
+              Avis vérifié · Installation climatisation
+            </div>
+          </div>
+        </div>
+
+        <!-- More reviews teaser -->
+        <p class="text-center mt-10 text-sm text-gray-400 font-medium">
+          + 34 autres avis 5 étoiles sur Google Maps
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CTA & FORMULAIRE ===== -->
+    <section id="contact" class="section-divider py-24 md:py-32 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <!-- Left -->
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Devis gratuit</p>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6">
+              Un projet ? <br />Parlons-en.
+            </h2>
+            <p class="text-gray-500 text-base leading-relaxed mb-10">
+              Décrivez-nous votre besoin. Nous vous répondons sous 24 heures avec
+              une estimation précise et sans engagement.
+            </p>
+
+            <!-- Contact info -->
+            <div class="space-y-5">
+              <a href="tel:0769651779" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center group-hover:border-black transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 5a2 2 0 012-2h2.28a2 2 0 011.897 1.368l.878 2.632a2 2 0 01-.45 2.109L8 11c1.137 2.274 3.726 4.863 6 6l1.89-1.605a2 2 0 012.11-.45l2.632.878A2 2 0 0122 17.72V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-400 font-medium">Téléphone</p>
+                  <p class="text-sm font-semibold group-hover:underline">07 69 65 17 79</p>
+                </div>
+              </a>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-400 font-medium">Zone d'intervention</p>
+                  <p class="text-sm font-semibold">Valence & Drôme (26)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div>
+            <form
+              name="contact"
+              method="POST"
+              onsubmit="handleSubmit(event)"
+              class="space-y-8"
+            >
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Prénom</label>
+                  <input type="text" name="prenom" placeholder="Jean" required class="input-underline" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Nom</label>
+                  <input type="text" name="nom" placeholder="Dupont" required class="input-underline" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Téléphone</label>
+                <input type="tel" name="telephone" placeholder="06 XX XX XX XX" required class="input-underline" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Adresse e-mail</label>
+                <input type="email" name="email" placeholder="jean@exemple.fr" class="input-underline" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Type de prestation</label>
+                <select name="prestation" class="input-underline cursor-pointer appearance-none">
+                  <option value="" disabled selected>Sélectionnez une prestation</option>
+                  <option value="installation">Installation climatisation / PAC</option>
+                  <option value="maintenance">Entretien & maintenance</option>
+                  <option value="electricite">Travaux d'électricité</option>
+                  <option value="autre">Autre / Je ne sais pas encore</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Message (optionnel)</label>
+                <textarea name="message" rows="3" placeholder="Décrivez brièvement votre projet…" class="input-underline"></textarea>
+              </div>
+
+              <button type="submit"
+                class="btn-primary w-full flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold">
+                Envoyer ma demande de devis
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </button>
+              <p class="text-xs text-gray-400 text-center">Réponse garantie sous 24h · Aucun engagement</p>
+            </form>
+
+            <!-- Success message (hidden by default) -->
+            <div id="form-success" class="hidden mt-8 p-6 border border-emerald-200 rounded-2xl bg-emerald-50 text-center">
+              <svg class="w-8 h-8 text-emerald-500 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <p class="font-bold text-emerald-800">Message envoyé avec succès !</p>
+              <p class="text-sm text-emerald-600 mt-1">Nous vous répondrons sous 24 heures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="section-divider py-12 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <p class="text-xl font-extrabold tracking-tight">MTS26</p>
+        <p class="text-xs text-gray-400 mt-1">Climatisation & Électricité · Valence, Drôme</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 sm:gap-8 text-sm text-gray-400">
+        <a href="#services" class="hover:text-black transition-colors">Services</a>
+        <a href="#avis" class="hover:text-black transition-colors">Avis clients</a>
+        <a href="#contact" class="hover:text-black transition-colors">Contact</a>
+        <a href="tel:0769651779" class="hover:text-black transition-colors font-medium">07 69 65 17 79</a>
+      </div>
+      <p class="text-xs text-gray-300">© 2025 MTS26 · Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOATING ===== -->
+  <a href="https://wa.me/33769651779?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20une%20prestation."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contacter MTS26 sur WhatsApp"
+     class="whatsapp-btn fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
+     style="background-color: #25D366;">
+    <svg viewBox="0 0 32 32" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#fff"
+        d="M16.003 2.667C8.636 2.667 2.667 8.635 2.667 16c0 2.355.63 4.658 1.826 6.676L2.667 29.333l6.844-1.795A13.27 13.27 0 0016.003 29.333C23.37 29.333 29.333 23.366 29.333 16S23.37 2.667 16.003 2.667zm0 2.4c6.04 0 10.93 4.892 10.93 10.933 0 6.04-4.89 10.933-10.93 10.933a10.894 10.894 0 01-5.527-1.5l-.396-.236-4.061 1.064 1.086-3.958-.258-.41a10.886 10.886 0 01-1.773-5.893C5.074 10.96 9.963 5.067 16.003 5.067zm-3.12 4.946c-.217 0-.57.08-.87.4-.3.32-1.14 1.113-1.14 2.716s1.167 3.15 1.33 3.367c.163.217 2.244 3.556 5.513 4.843 2.714 1.07 3.267.857 3.856.8.59-.057 1.9-.776 2.168-1.527.27-.75.27-1.394.188-1.528-.08-.133-.297-.213-.62-.373s-1.91-.943-2.207-1.05c-.296-.107-.51-.16-.727.16-.215.32-.838 1.05-.97 1.267-.134.217-.27.24-.59.08-.32-.16-1.35-.498-2.572-1.588-.95-.848-1.59-1.895-1.776-2.215-.186-.32-.02-.493.14-.652.145-.143.32-.373.48-.56.16-.186.213-.32.32-.533.107-.213.053-.4-.027-.56-.08-.16-.71-1.774-.98-2.43-.26-.633-.527-.546-.727-.556-.19-.01-.4-.013-.617-.013z"/>
+    </svg>
+  </a>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Envoi en cours…';
+
+      // Simulate async send (replace with real endpoint)
+      setTimeout(() => {
+        form.style.display = 'none';
+        document.getElementById('form-success').classList.remove('hidden');
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
