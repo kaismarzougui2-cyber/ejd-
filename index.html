@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MTS26 — Spécialiste Climatisation à Valence</title>
-  <meta name="description" content="Spécialiste climatisation à Valence. Installation, maintenance et réparation de climatiseurs. Note Google 5/5. Devis gratuit sous 24h." />
+  <title>NES — Nico Electricité Service · Trignac</title>
+  <meta name="description" content="Électricien certifié IRVE & RGE à Trignac. Pose de bornes de recharge, VMC, PAC, alarmes et domotique. Devis gratuit sous 24h." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -28,7 +28,6 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; letter-spacing: -0.02em; }
 
-    /* Nav underline hover */
     .nav-link { position: relative; }
     .nav-link::after {
       content: '';
@@ -42,7 +41,6 @@
     }
     .nav-link:hover::after { transform: scaleX(1); }
 
-    /* Input bottom-border only */
     .input-underline {
       background: transparent;
       border: none;
@@ -59,24 +57,18 @@
     }
     .input-underline::placeholder { color: #9ca3af; }
     .input-underline:focus { border-bottom-color: #000; }
-
-    /* Textarea variant */
     textarea.input-underline { resize: none; }
 
-    /* Star rating */
     .star { color: #f59e0b; }
 
-    /* WhatsApp float */
     @keyframes pulse-soft {
       0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.35); }
       50%       { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
     }
     .whatsapp-btn { animation: pulse-soft 2.4s ease-in-out infinite; }
 
-    /* Section divider */
     .section-divider { border-top: 1px solid #e5e7eb; }
 
-    /* Service card hover */
     .service-card {
       transition: box-shadow 0.25s ease, transform 0.25s ease;
     }
@@ -85,12 +77,10 @@
       box-shadow: 0 8px 30px rgba(0,0,0,0.07);
     }
 
-    /* Review card */
     .review-card {
       box-shadow: 0 2px 16px rgba(0,0,0,0.06);
     }
 
-    /* CTA button */
     .btn-primary {
       background: #000;
       color: #fff;
@@ -98,6 +88,14 @@
     }
     .btn-primary:hover { background: #1a1a1a; transform: translateY(-1px); }
     .btn-primary:active { transform: translateY(0); }
+
+    /* IRVE highlight card */
+    .irve-card {
+      background: #000;
+      color: #fff;
+    }
+    .irve-card .service-list-item { color: #d1d5db; }
+    .irve-card .service-divider { border-color: #333; }
   </style>
 </head>
 <body class="bg-white text-black">
@@ -107,14 +105,13 @@
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <!-- Logo -->
       <a href="#" class="flex items-center gap-2.5">
-        <!-- Drapeau français SVG -->
         <svg viewBox="0 0 30 20" class="w-6 h-4 rounded-sm flex-shrink-0" xmlns="http://www.w3.org/2000/svg">
           <rect width="10" height="20" fill="#002395"/>
           <rect x="10" width="10" height="20" fill="#fff"/>
           <rect x="20" width="10" height="20" fill="#ED2939"/>
         </svg>
-        <span class="text-xl font-extrabold tracking-tight leading-none">MTS26</span>
-        <span class="hidden sm:block text-xs font-medium text-gray-400 uppercase tracking-widest pt-px">Spécialiste Climatisation · Valence</span>
+        <span class="text-xl font-extrabold tracking-tight leading-none">NES</span>
+        <span class="hidden sm:block text-xs font-medium text-gray-400 uppercase tracking-widest pt-px">Nico Electricité Service · Trignac</span>
       </a>
 
       <!-- Nav links (desktop) -->
@@ -125,7 +122,7 @@
       </nav>
 
       <!-- CTA -->
-      <a href="tel:0769651779"
+      <a href="tel:0683496202"
          class="btn-primary inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -139,70 +136,52 @@
   <!-- ===== HERO ===== -->
   <main>
     <section class="pt-32 pb-24 md:pt-44 md:pb-36 px-6">
-      <div class="max-w-6xl mx-auto">
-        <!-- Two-column layout: text left, image right -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="max-w-4xl mx-auto">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 mb-10 text-xs font-semibold uppercase tracking-widest text-gray-500">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span>
+          Disponible · Trignac & Loire-Atlantique
+        </div>
 
-          <!-- Left: text content -->
-          <div>
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 mb-10 text-xs font-semibold uppercase tracking-widest text-gray-500">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span>
-              Disponible · Valence & alentours
-            </div>
+        <h1 class="font-extrabold tracking-tight leading-[1.0] mb-8">
+          <span class="block text-4xl sm:text-5xl md:text-6xl">ÉLECTRICITÉ & IRVE</span>
+          <span class="block text-xl sm:text-2xl md:text-3xl text-gray-400 mt-3">Bornes de recharge · Énergie · Sécurité</span>
+        </h1>
 
-            <h1 class="font-extrabold tracking-tight leading-[1.0] mb-8">
-              <span class="block text-4xl sm:text-5xl md:text-6xl">CLIMATISATION</span>
-              <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-400 mt-3">Installation · Maintenance · Réparation</span>
-            </h1>
+        <p class="text-lg md:text-xl text-gray-500 font-normal max-w-2xl leading-relaxed mb-12">
+          Électricien certifié <strong class="text-black font-semibold">IRVE</strong> et
+          <strong class="text-black font-semibold">RGE Qualifelec</strong> à Trignac.
+          Pose de bornes de recharge pour <strong class="text-black font-semibold">particuliers et professionnels</strong>,
+          installations neuves, rénovations et dépannage.
+        </p>
 
-            <p class="text-lg md:text-xl text-gray-500 font-normal leading-relaxed mb-12">
-              Spécialiste climatisation à <strong class="text-black font-semibold">Valence</strong>, certifié
-              <strong class="text-black font-semibold">RGE</strong>.
-              Plus de <strong class="text-black font-semibold">100 chantiers</strong> réalisés avec soin —
-              un service personnalisé et une satisfaction client de 5/5.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href="tel:0769651779"
-                 class="btn-primary inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M3 5a2 2 0 012-2h2.28a2 2 0 011.897 1.368l.878 2.632a2 2 0 01-.45 2.109L8 11c1.137 2.274 3.726 4.863 6 6l1.89-1.605a2 2 0 012.11-.45l2.632.878A2 2 0 0122 17.72V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5z"/>
-                </svg>
-                07 69 65 17 79
-              </a>
-              <a href="#contact"
-                 class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-gray-200 text-base font-semibold text-gray-700 hover:border-black hover:text-black transition-colors">
-                Demander un devis gratuit
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right: hero image -->
-          <div class="flex items-center justify-center lg:justify-end">
-            <img
-              src="ChatGPT%20Image%2015%20mai%202026%2C%2015_52_44.png"
-              alt="Installation climatisation MTS26 — technicien expert à Valence"
-              class="w-full rounded-3xl object-cover"
-              style="max-height: 420px; max-width: 420px; box-shadow: 0 25px 60px rgba(0,0,0,0.15), 0 8px 20px rgba(0,0,0,0.08);"
-            />
-          </div>
-
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:0683496202"
+             class="btn-primary inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5a2 2 0 012-2h2.28a2 2 0 011.897 1.368l.878 2.632a2 2 0 01-.45 2.109L8 11c1.137 2.274 3.726 4.863 6 6l1.89-1.605a2 2 0 012.11-.45l2.632.878A2 2 0 0122 17.72V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5z"/>
+            </svg>
+            06 83 49 62 02
+          </a>
+          <a href="#contact"
+             class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-gray-200 text-base font-semibold text-gray-700 hover:border-black hover:text-black transition-colors">
+            Demander un devis gratuit
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
         </div>
 
         <!-- Stats -->
         <div class="mt-20 grid grid-cols-3 gap-0 border border-gray-100 rounded-2xl overflow-hidden">
           <div class="px-6 py-6 md:px-8 md:py-8 border-r border-gray-100">
-            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">100+</p>
-            <p class="text-sm text-gray-500 mt-1 font-medium">Chantiers réalisés</p>
+            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">IRVE</p>
+            <p class="text-sm text-gray-500 mt-1 font-medium">Certifié bornes de recharge</p>
           </div>
           <div class="px-6 py-6 md:px-8 md:py-8 border-r border-gray-100">
             <p class="text-3xl md:text-4xl font-extrabold tracking-tight">RGE</p>
-            <p class="text-sm text-gray-500 mt-1 font-medium">Certifié Qualibois</p>
+            <p class="text-sm text-gray-500 mt-1 font-medium">Qualifelec</p>
           </div>
           <div class="px-6 py-6 md:px-8 md:py-8">
             <p class="text-3xl md:text-4xl font-extrabold tracking-tight">24h</p>
@@ -215,27 +194,30 @@
     <!-- ===== BANDEAU CONFIANCE ===== -->
     <div class="section-divider">
       <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10">
-        <!-- Google logo + note -->
         <div class="flex items-center gap-3">
-          <svg viewBox="0 0 48 48" class="w-7 h-7 flex-shrink-0" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.36-8.16 2.36-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-          </svg>
-          <div class="flex flex-col">
-            <div class="flex items-center gap-1">
-              <span class="star text-lg">★★★★★</span>
-            </div>
-            <span class="text-xs text-gray-500 font-medium">Note Google</span>
+          <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-bold">Certifié IRVE</p>
+            <p class="text-xs text-gray-400">Bornes pro & particuliers</p>
           </div>
         </div>
 
         <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
 
-        <div class="text-center sm:text-left">
-          <p class="text-2xl font-extrabold tracking-tight">5 / 5</p>
-          <p class="text-xs text-gray-500 font-medium">Avis vérifiés Google</p>
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-bold">RGE Qualifelec</p>
+            <p class="text-xs text-gray-400">Reconnu Garant de l'Environnement</p>
+          </div>
         </div>
 
         <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
@@ -244,7 +226,7 @@
           <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          Entreprise locale de confiance
+          Entreprise locale de confiance · Trignac
         </div>
       </div>
     </div>
@@ -258,88 +240,90 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Service 1 -->
-          <div class="service-card border border-gray-100 rounded-2xl p-8">
+
+          <!-- Service 1 — IRVE (carte noire, mise en avant) -->
+          <div class="irve-card service-card rounded-2xl p-8">
             <div class="mb-8">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 3v1m0 16v1M4.22 4.22l.71.71m13.66 13.66.71.71M3 12H2m20 0h-1M4.22 19.78l.71-.71M18.36 5.64l.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 9v3m0 0v3m0-3h3m-3 0H9"/>
+                  d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
               </svg>
             </div>
-            <h3 class="text-xl font-bold tracking-tight mb-3">Installation</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">
-              Pose de climatiseurs mono et multi-split, pompes à chaleur air/air et air/eau.
-              Dimensionnement adapté à votre logement, installation soignée et mise en service complète.
+            <div class="inline-flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1 text-xs font-semibold text-white mb-4 uppercase tracking-widest">
+              Certifié IRVE
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-3 text-white">Bornes de recharge</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Pose et raccordement de bornes de recharge pour véhicules électriques.
+              Intervention pour <strong class="text-white">particuliers</strong> (domicile, garage) et
+              <strong class="text-white">professionnels</strong> (parking, entreprise, copropriété).
             </p>
-            <div class="mt-8 pt-6 border-t border-gray-100">
-              <ul class="space-y-2 text-sm text-gray-500">
+            <div class="mt-8 pt-6 border-t service-divider" style="border-color:#333;">
+              <ul class="space-y-2 text-sm service-list-item" style="color:#d1d5db;">
                 <li class="flex items-center gap-2">
-                  <span class="w-1 h-1 bg-black rounded-full"></span>Split mural & console
+                  <span class="w-1 h-1 bg-white rounded-full"></span>Borne murale domicile
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="w-1 h-1 bg-black rounded-full"></span>Pompe à chaleur PAC
+                  <span class="w-1 h-1 bg-white rounded-full"></span>Borne professionnelle & parking
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="w-1 h-1 bg-black rounded-full"></span>Marques Daikin, Mitsubishi, Atlantic
+                  <span class="w-1 h-1 bg-white rounded-full"></span>Éligible aux aides CEE & ADVENIR
                 </li>
               </ul>
             </div>
           </div>
 
-          <!-- Service 2 -->
+          <!-- Service 2 — Énergie & Ventilation -->
           <div class="service-card border border-gray-100 rounded-2xl p-8">
             <div class="mb-8">
               <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0V2m0 16v2M4 11H2m18 0h-2M6.34 6.34L4.93 4.93m12.73 12.73l-1.41-1.41M6.34 17.66l-1.41 1.41m12.73-12.73l-1.41 1.41"/>
-                <circle cx="11" cy="11" r="2.5" stroke="currentColor" stroke-width="1.25"/>
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
               </svg>
             </div>
-            <h3 class="text-xl font-bold tracking-tight mb-3">Maintenance</h3>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Énergie & Ventilation</h3>
             <p class="text-gray-500 text-sm leading-relaxed">
-              Entretien annuel de vos systèmes pour garantir performance et longévité.
-              Nettoyage des filtres, contrôle du circuit frigorifique, diagnostic électronique.
+              Installation de systèmes de ventilation et de chauffage pour un habitat sain et économe.
+              Certifié RGE — travaux éligibles aux aides de l'État.
             </p>
             <div class="mt-8 pt-6 border-t border-gray-100">
               <ul class="space-y-2 text-sm text-gray-500">
                 <li class="flex items-center gap-2">
-                  <span class="w-1 h-1 bg-black rounded-full"></span>Contrat d'entretien annuel
+                  <span class="w-1 h-1 bg-black rounded-full"></span>VMC Hygro (certifié RGE)
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="w-1 h-1 bg-black rounded-full"></span>Dépannage rapide
+                  <span class="w-1 h-1 bg-black rounded-full"></span>PAC air/air
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="w-1 h-1 bg-black rounded-full"></span>Recharge de fluide frigorigène
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Convecteurs électriques
                 </li>
               </ul>
             </div>
           </div>
 
-          <!-- Service 3 -->
+          <!-- Service 3 — Électricité, Sécurité & Domotique -->
           <div class="service-card border border-gray-100 rounded-2xl p-8">
             <div class="mb-8">
               <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/>
+                  d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
               </svg>
             </div>
-            <h3 class="text-xl font-bold tracking-tight mb-3">Réparation</h3>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Électricité & Sécurité</h3>
             <p class="text-gray-500 text-sm leading-relaxed">
-              Diagnostic précis et réparation rapide de tous types de climatiseurs.
-              Intervention soignée pour retrouver un confort optimal le plus vite possible.
+              Installations neuves, rénovations complètes, alarmes et domotique.
+              Intervention soignée du diagnostic au dépannage, cuisine et salle de bain incluses.
             </p>
             <div class="mt-8 pt-6 border-t border-gray-100">
               <ul class="space-y-2 text-sm text-gray-500">
                 <li class="flex items-center gap-2">
-                  <span class="w-1 h-1 bg-black rounded-full"></span>Diagnostic toutes marques
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Alarmes anti-intrusion & incendie
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="w-1 h-1 bg-black rounded-full"></span>Remplacement de pièces
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Domotique & pilotage à distance
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="w-1 h-1 bg-black rounded-full"></span>Intervention rapide à Valence
+                  <span class="w-1 h-1 bg-black rounded-full"></span>Rénovation & dépannage électrique
                 </li>
               </ul>
             </div>
@@ -355,16 +339,17 @@
               </svg>
             </div>
             <div>
-              <p class="font-bold text-sm">Certification RGE</p>
-              <p class="text-xs text-gray-400">Reconnu Garant de l'Environnement</p>
+              <p class="font-bold text-sm">IRVE & RGE Qualifelec</p>
+              <p class="text-xs text-gray-400">Double certification officielle</p>
             </div>
           </div>
           <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
           <p class="text-sm text-gray-500 leading-relaxed">
-            Votre certification RGE vous ouvre droit aux
-            <strong class="text-black">aides MaPrimeRénov'</strong>, à
-            <strong class="text-black">l'éco-PTZ</strong> et aux primes CEE.
-            Nous vous accompagnons dans vos démarches.
+            La certification IRVE vous permet de bénéficier des
+            <strong class="text-black">aides ADVENIR</strong> et primes CEE pour votre borne.
+            La certification RGE ouvre droit à
+            <strong class="text-black">MaPrimeRénov'</strong> et l'éco-PTZ pour vos travaux d'énergie.
+            Nous vous accompagnons dans toutes vos démarches.
           </p>
         </div>
       </div>
@@ -384,15 +369,15 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Avis 1 — Renaud OLIVER -->
+          <!-- Avis 1 -->
           <div class="review-card bg-white rounded-2xl p-8 border border-gray-100">
             <div class="flex items-start justify-between mb-6">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                  RO
+                  JM
                 </div>
                 <div>
-                  <p class="font-bold text-sm tracking-tight">Renaud OLIVER</p>
+                  <p class="font-bold text-sm tracking-tight">Jean-Marc T.</p>
                   <p class="text-xs text-gray-400">Client vérifié Google</p>
                 </div>
               </div>
@@ -401,28 +386,27 @@
               </div>
             </div>
             <p class="text-gray-700 text-sm leading-relaxed">
-              "Très satisfait de la prestation. Kaïs est intervenu rapidement,
-              le travail est propre et soigné. L'installation de la climatisation
-              s'est déroulée sans aucun souci. Je recommande vivement cette entreprise
-              pour son sérieux et sa compétence."
+              "Nicolas est intervenu rapidement pour installer ma borne de recharge à domicile.
+              Travail propre, soigné et très professionnel. Il a pris le temps de tout expliquer
+              et m'a même aidé dans les démarches pour l'aide ADVENIR. Je recommande vivement !"
             </p>
             <div class="mt-6 pt-5 border-t border-gray-100 flex items-center gap-2 text-xs text-gray-400">
               <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
               </svg>
-              Avis vérifié · Installation climatisation
+              Avis vérifié · Pose de borne IRVE
             </div>
           </div>
 
-          <!-- Avis 2 — Paula Pereira -->
+          <!-- Avis 2 -->
           <div class="review-card bg-white rounded-2xl p-8 border border-gray-100">
             <div class="flex items-start justify-between mb-6">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                  PP
+                  SL
                 </div>
                 <div>
-                  <p class="font-bold text-sm tracking-tight">Paula Pereira</p>
+                  <p class="font-bold text-sm tracking-tight">Sophie L.</p>
                   <p class="text-xs text-gray-400">Client vérifié Google</p>
                 </div>
               </div>
@@ -431,21 +415,19 @@
               </div>
             </div>
             <p class="text-gray-700 text-sm leading-relaxed">
-              "Excellent professionnel ! Ponctuel, efficace et très à l'écoute.
-              Il a installé notre climatisation en un temps record et tout fonctionne
-              parfaitement. Le rapport qualité-prix est vraiment excellent.
-              N'hésitez pas à faire appel à ses services !"
+              "Rénovation électrique complète de notre maison, y compris la salle de bain et la cuisine.
+              Nicolas est sérieux, ponctuel et le résultat est impeccable. Devis clair, pas de mauvaise
+              surprise. Une vraie satisfaction du début à la fin."
             </p>
             <div class="mt-6 pt-5 border-t border-gray-100 flex items-center gap-2 text-xs text-gray-400">
               <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
               </svg>
-              Avis vérifié · Installation climatisation
+              Avis vérifié · Rénovation électrique
             </div>
           </div>
         </div>
 
-        <!-- More reviews teaser -->
         <p class="text-center mt-10 text-sm text-gray-400 font-medium">
           Tous nos avis sont disponibles sur Google Maps
         </p>
@@ -469,7 +451,7 @@
 
             <!-- Contact info -->
             <div class="space-y-5">
-              <a href="tel:0769651779" class="flex items-center gap-4 group">
+              <a href="tel:0683496202" class="flex items-center gap-4 group">
                 <div class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center group-hover:border-black transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -478,7 +460,20 @@
                 </div>
                 <div>
                   <p class="text-xs text-gray-400 font-medium">Téléphone</p>
-                  <p class="text-sm font-semibold group-hover:underline">07 69 65 17 79</p>
+                  <p class="text-sm font-semibold group-hover:underline">06 83 49 62 02</p>
+                </div>
+              </a>
+
+              <a href="mailto:nico.electricite.service@gmail.com" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center group-hover:border-black transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-400 font-medium">E-mail</p>
+                  <p class="text-sm font-semibold group-hover:underline">nico.electricite.service@gmail.com</p>
                 </div>
               </a>
 
@@ -492,8 +487,21 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-xs text-gray-400 font-medium">Zone d'intervention</p>
-                  <p class="text-sm font-semibold">Valence & Drôme (26)</p>
+                  <p class="text-xs text-gray-400 font-medium">Adresse</p>
+                  <p class="text-sm font-semibold">39 bis rue Charles Brunelière<br/>44 570 Trignac</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-400 font-medium">N° SIRET</p>
+                  <p class="text-sm font-semibold">878 923 374 00010</p>
                 </div>
               </div>
             </div>
@@ -532,10 +540,15 @@
                 <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Type de prestation</label>
                 <select name="prestation" class="input-underline cursor-pointer appearance-none">
                   <option value="" disabled selected>Sélectionnez une prestation</option>
-                  <option value="installation">Installation d'un climatiseur</option>
-                  <option value="maintenance">Entretien & maintenance</option>
-                  <option value="reparation">Réparation / Dépannage</option>
-                  <option value="autre">Autre / Je ne sais pas encore</option>
+                  <option value="irve-particulier">Borne de recharge — Particulier</option>
+                  <option value="irve-pro">Borne de recharge — Professionnel</option>
+                  <option value="vmc">VMC Hygro</option>
+                  <option value="pac">PAC air/air</option>
+                  <option value="alarme">Alarme & Sécurité</option>
+                  <option value="domotique">Domotique</option>
+                  <option value="renovation">Installation neuve / Rénovation</option>
+                  <option value="depannage">Dépannage électrique</option>
+                  <option value="autre">Autre</option>
                 </select>
               </div>
 
@@ -554,13 +567,12 @@
               <p class="text-xs text-gray-400 text-center">Réponse garantie sous 24h · Aucun engagement</p>
             </form>
 
-            <!-- Success message (hidden by default) -->
             <div id="form-success" class="hidden mt-8 p-6 border border-emerald-200 rounded-2xl bg-emerald-50 text-center">
               <svg class="w-8 h-8 text-emerald-500 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
               <p class="font-bold text-emerald-800">Message envoyé avec succès !</p>
-              <p class="text-sm text-emerald-600 mt-1">Nous vous répondrons sous 24 heures.</p>
+              <p class="text-sm text-emerald-600 mt-1">Nicolas vous répondra sous 24 heures.</p>
             </div>
           </div>
         </div>
@@ -572,24 +584,25 @@
   <footer class="section-divider py-12 px-6">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
       <div>
-        <p class="text-xl font-extrabold tracking-tight">MTS26</p>
-        <p class="text-xs text-gray-400 mt-1">Spécialiste Climatisation · Valence, Drôme</p>
+        <p class="text-xl font-extrabold tracking-tight">NES</p>
+        <p class="text-xs text-gray-400 mt-1">Nico Electricité Service · 44 570 Trignac</p>
+        <p class="text-xs text-gray-300 mt-0.5">SIRET 878 923 374 00010</p>
       </div>
       <div class="flex flex-col sm:flex-row gap-2 sm:gap-8 text-sm text-gray-400">
         <a href="#services" class="hover:text-black transition-colors">Services</a>
         <a href="#avis" class="hover:text-black transition-colors">Avis clients</a>
         <a href="#contact" class="hover:text-black transition-colors">Contact</a>
-        <a href="tel:0769651779" class="hover:text-black transition-colors font-medium">07 69 65 17 79</a>
+        <a href="tel:0683496202" class="hover:text-black transition-colors font-medium">06 83 49 62 02</a>
       </div>
-      <p class="text-xs text-gray-300">© 2025 MTS26 · Tous droits réservés</p>
+      <p class="text-xs text-gray-300">© 2025 NES · Tous droits réservés</p>
     </div>
   </footer>
 
   <!-- ===== WHATSAPP FLOATING ===== -->
-  <a href="https://wa.me/33769651779?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20une%20prestation."
+  <a href="https://wa.me/33683496202?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20une%20prestation."
      target="_blank"
      rel="noopener noreferrer"
-     aria-label="Contacter MTS26 sur WhatsApp"
+     aria-label="Contacter NES sur WhatsApp"
      class="whatsapp-btn fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
      style="background-color: #25D366;">
     <svg viewBox="0 0 32 32" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg">
@@ -605,8 +618,6 @@
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
       btn.textContent = 'Envoi en cours…';
-
-      // Simulate async send (replace with real endpoint)
       setTimeout(() => {
         form.style.display = 'none';
         document.getElementById('form-success').classList.remove('hidden');
